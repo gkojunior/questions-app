@@ -1,10 +1,13 @@
-import './App.css'
+import { useState } from 'react'
+import data from './data'
+import Questions from './Questions'
 
 function App() {
+  const [questions, setQuestions] =useState(data)
   return (
-    <div>
-      <h2>Questions App</h2>
-    </div>
+    <main>
+      <Questions questions={questions} />
+    </main>
   )
 }
 
